@@ -1,0 +1,15 @@
+public class TourHanoi 
+{
+	public static int i = 0; // Compte le nombre de déplacements.
+	
+	public static void hanoi(int nbr, int dep, int fin, int inter)
+	{
+		   if(nbr > 0)
+		   {
+			   hanoi(nbr-1, dep, inter, fin);
+			   System.out.println("De "+ dep + " à "+fin);
+			   i++;
+			   hanoi(nbr-1, inter, fin, dep);
+		   }
+	}
+}

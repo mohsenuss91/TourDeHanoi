@@ -1,0 +1,15 @@
+    n : nombre de disques utilisés
+    D : emplacement de départ
+    A : emplacement d'arrivée
+    I : emplacement intermédiaire 
+
+sub Hanoi(n,D,A,I)
+    si n =1 
+    alors 
+        Deplacer le disque de D vers A
+    sinon              
+        Hanoi(n-1,D,I,A)
+        Deplacer le disque de D vers A
+        Hanoi(n-1,I,A,D)
+    fin-du-si
+fin-du-sub
